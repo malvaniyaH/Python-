@@ -1,0 +1,51 @@
+__**For Loop**__
+
+A for loop is used for iterating over a sequence (that is either a list, a tuple, a dictionary, a set, or a string).
+
+This is less like the for keyword in other programming languages, and works more like an iterator method as found in other object-orientated programming languages.
+
+With the for loop we can execute a set of statements, once for each item in a list, tuple, set etc.
+
+Syntex 
+        FOR Var IN Stored_variable :
+              Statements
+
+Ex 
+    data = ["H" , "A" , "R" , "S" , "H" , "I" , "L"]
+
+     for x in data:
+        print(x)
+
+OUTPUT :- 
+H
+A
+R
+S
+H
+I
+L 
+
+__**WHILE**__
+
+ A while loop in Python repeatedly executes a block of code as long as a given condition is True.
+
+Syntex:-
+              while condition:
+                 # code block
+
+condition: A boolean expression evaluated before each iteration,If the condition becomes False, the loop stops.
+Be careful to update variables inside the loop to avoid infinite loops.
+
+Ex 
+  
+l=1
+while l<=10:
+    print(l)
+    l+=1
+
+OUTPUT:-
+1
+2
+3
+4
+5
