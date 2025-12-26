@@ -45,3 +45,30 @@ print("Hello, World!")
 
 
 Note :- We Can Use ' + ' for String Concatenation.
+
+***___ User Input in Python ___***
+
+String Input..:-
+   Syntex
+              var = input("message")
+  Ex 
+            k = input("Enter Name")
+
+Integer Input...:-
+    Syntex
+             var = int(input("message")
+ Ex 
+       v = int(input("Enter Number"))
+
+Similarly, for a float input, use the float() function.
+
+height = float(input("Enter your height in meters: "))
+print("Your height is:", height)
+Copy
+Multiple Inputs
+
+You can take multiple inputs in one line by using the split() method.
+
+name, age = input("Enter your name and age separated by space: ").split()
+print("Name:", name)
+print("Age:", age)
