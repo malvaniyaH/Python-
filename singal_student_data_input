@@ -1,0 +1,78 @@
+'''singal student std_ro,std_name,std_class,std_contact_number'''
+
+    std_ro=int(input("Enter Roll Number :-"))
+    std_name=input("Enter Name :- ")
+    std_class=input("Enter Class :- ")
+    std_con_number=int(input("Enter Student Conntact Number :- "))
+    
+for i in range(0,35):
+
+    print("*",end="")
+
+print("__Stud Detail__",end="")
+
+for i in range(0,45):
+
+    print("*",end="")
+
+print()
+
+for i in range(0,95):
+
+    print("-",end="")
+    
+print()
+
+print("Std No",end='')
+
+for i in range(0,17):
+
+    print(" ",end='')
+
+print("Std Name",end='')
+
+for i in range(0,21):
+
+    print(" ",end='')
+
+print("Std class",end='')
+
+for i in range(0,20):
+
+    print(" ",end='')
+
+print("Std Number",end='')
+
+print()
+
+for j in range(0,95):
+   
+    print("=",end='')
+    
+for i in range(0,15):
+
+    print(" ",end='')
+
+print()  
+
+print(" ",std_ro,end='')
+
+for i in range(0,20):
+ 
+      print(" ",end='')
+
+print(" ",std_name,end='')
+
+for i in range(0,20):
+
+    print(" ",end='')
+
+print(" ",std_class,end='')
+
+for i in range(0,20):
+
+    print(" ",end='')
+
+print(" ",std_con_number,end='')
+
+print()
