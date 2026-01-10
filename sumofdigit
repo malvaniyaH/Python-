@@ -1,0 +1,9 @@
+'1 to 10 display an at late the sum of it'
+def dig(l):
+     sum=0
+     for i in range(0,l):
+        sum=sum+i
+     print("Total = ",sum)
+
+l=int(input("Enter Value = "))
+dig(l)
