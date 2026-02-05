@@ -1,0 +1,67 @@
+import pymongo
+connection="mongodb://localhost:27017/"
+
+def insertData():
+    id=int(input("Enter Id :- "))
+    name=input("Enter Name :- ")
+    data={
+        "id":id,
+        "name":name
+    }
+    info=collection.insert_one(data).inserted_id
+
+def updateData():
+    
+    uId = int(input("Enter Id That Your Have to Update :- "))
+    
+    print(uId," for Update...\n")
+
+    newId = int(input("Enter NEW Id :- "))   
+
+    info=collection.update_many({"id":uId},{'$set':{"id":newId}})
+
+    ck=input("You Have To Update Name (y/n) :- ")
+    if(ck=='y' or ck=='Y'):
+      uName = input("Enter Name That You Have To Update :-")
+      newName = input("Enter NEW Name :-")
+      print(uName," TO ",newName," is Done...\n")
+      info1=collection.update_many({"name":uName},{'$set':{"name":newName}})
+
+def deleteData():
+    id=int(input("Enter Id For Delete :- "))
+    
+    print("\nDelete Value is ",id)
+
+    info=collection.delete_one({"id":id})
+
+    ck=input("You Have To Delete Name (y/n) :- ")
+    if(ck=='y' or ck=='Y'):
+      Name = input("Enter Name :-")
+      info1=collection.delete_one({"name":Name})
+
+def display():
+     dis = collection.find({})
+     for my in dis:
+         print(my)
+
+
+if __name__=="__main__":
+    client = pymongo.MongoClient(connection)
+    db = client['dm']
+    collection=db.datas
+while True:
+    i = int(input("1.Insert\n2.Update\n3.Delete\n4.Display\n5.Exit\nEnter Your Choice :- "))
+
+    match(i):   
+        case 1:
+            insertData()
+        case 2:
+            updateData()
+        case 3:
+            deleteData()
+        case 4:
+            display()
+        case 5:
+            exit()
+    if(i>5):
+         print("Invelid Choice...")
