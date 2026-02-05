@@ -41,6 +41,8 @@ def deleteData():
 
 def display():
      dis = collection.find({})
+#for display condition Base Output 
+  dis = collection.find({"key" : Value})
      for my in dis:
          print(my)
 
